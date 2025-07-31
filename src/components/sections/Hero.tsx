@@ -34,21 +34,21 @@ const Hero = () => {
               style={{ x: subHeaderX }}
               transition={{ type: 'spring', stiffness: 90, damping: 22 }}
             >
-              Step Into the Mind of
+              Accountant
             </motion.p>
             <motion.h1
               className="text-dark-gray text-6xl sm:text-7xl md:text-8xl lg:text-[110px] font-bold leading-none tracking-tight"
               style={{ x: headingX }}
               transition={{ type: 'spring', stiffness: 90, damping: 22 }}
             >
-              Hanna<span className="ml-[0.2em]">Sauquillo</span>
+              Hanna Louisa<span className="ml-[0.2em]">Sauquillo</span>
             </motion.h1>
             <motion.p
               className="text-primary-pink text-lg md:text-xl font-medium mt-4 md:mt-6"
               style={{ x: subHeaderX }}
               transition={{ type: 'spring', stiffness: 90, damping: 22 }}
             >
-              Stories in Every Pixel
+              Licensed Financial Advisor
             </motion.p>
           </div>
         </div>
@@ -57,7 +57,6 @@ const Hero = () => {
       {/* Bottom Text */}
       <div className="absolute bottom-0 left-0 right-0 mx-auto w-full max-w-screen-xl px-10 pb-8 sm:px-20">
         <div className="flex flex-col text-center gap-2 md:flex-row md:text-left justify-between items-center text-sm font-medium text-medium-gray">
-          <p>Accountant</p>
         </div>
       </div>
     </section>

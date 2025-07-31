@@ -12,62 +12,62 @@ type Project = {
 
 const projectsData: Project[] = [
   {
-    title: "Tech Startup Financial Restructuring",
-    description: "Complete financial overhaul resulting in 40% cost reduction",
-    categories: ["Financial Analysis"],
+    title: "City Government Accounting Support",
+    description: "On-the-Job Training experience with financial reporting and compliance",
+    categories: ["Government Accounting"],
     imagePlaceholder: true,
   },
   {
-    title: "Multi-State Tax Optimization",
-    description: "Strategic tax planning across 5 states saving $2M annually",
-    categories: ["Tax Services", "Business Advisory"],
+    title: "E-commerce Financial Coordination",
+    description: "Admin and financial support for digital advertising operations",
+    categories: ["Digital Business", "Financial Admin"],
     imagePlaceholder: true,
   },
   {
-    title: "E-commerce Platform Audit",
-    description: "Comprehensive audit identifying revenue leakage points",
-    categories: ["Financial Analysis"],
+    title: "JPIA Financial Leadership",
+    description: "VP for Finance managing student organization budget and activities",
+    categories: ["Student Leadership"],
     imagePlaceholder: true,
   },
   {
-    title: "Manufacturing Cost Analysis",
-    description: "Detailed cost breakdown leading to 25% margin improvement",
-    categories: ["Tax Services"],
+    title: "Bookkeeping Certification Project",
+    description: "TESDA NCII & NCIII certification with practical applications",
+    categories: ["Professional Development"],
     imagePlaceholder: true,
   },
   {
-    title: "Non-Profit Financial Systems",
-    description: "Implemented new accounting systems for transparency",
-    categories: ["Tax Services", "Business Advisory"],
+    title: "Excel Financial Modeling",
+    description: "Microsoft Office Specialist certification focused on accounting applications",
+    categories: ["Technical Skills"],
     imagePlaceholder: true,
   },
   {
-    title: "Real Estate Portfolio Management",
-    description: "Financial oversight for $50M property portfolio",
-    categories: ["Tax Services"],
+    title: "QuickBooks & Xero Implementation",
+    description: "Hands-on experience with cloud accounting software",
+    categories: ["Accounting Software"],
     imagePlaceholder: true,
   },
   {
-    title: "Healthcare Practice Consolidation",
-    description: "Merger accounting for 3 medical practices",
-    categories: ["Tax Services"],
+    title: "Academic Excellence Projects",
+    description: "Multiple Dean's List recognitions and scholarship achievements",
+    categories: ["Academic Achievement"],
     imagePlaceholder: true,
   },
   {
-    title: "Retail Chain Budget Forecasting",
-    description: "5-year financial projections and scenario planning",
-    categories: ["Tax Services", "Business Advisory"],
+    title: "Community Leadership",
+    description: "Regional competitions and student organization management",
+    categories: ["Leadership"],
     imagePlaceholder: true,
   },
   {
-    title: "Small Business Tax Strategy",
-    description: "Customized tax strategies for 30+ small businesses",
-    categories: ["Tax Services", "Financial Analysis"],
+    title: "Digital Finance Training",
+    description: "LinkedIn Learning certifications in digital tools and AI",
+    categories: ["Professional Development"],
     imagePlaceholder: true,
   },
 ];
 
-const filters = ["All", "Tax Services", "Financial Analysis", "Business Advisory"];
+const filters = ["All", "Student Leadership", "Professional Development", "Technical Skills", "Academic Achievement"];
 
 const ProjectCard = ({ title, description }: { title: string; description: string }) => (
   <div className="bg-white shadow-md group cursor-pointer">

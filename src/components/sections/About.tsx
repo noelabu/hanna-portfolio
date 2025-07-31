@@ -1,110 +1,113 @@
-import Link from "next/link";
-import { ScrollFadeInSection } from "@/components/ui/ScrollFadeInSection";
 
 const experiences = [
   {
-    title: "Senior Accountant",
-    company: "Freelance Accounting Services", 
-    dates: "2023 – Present",
+    title: "Adscale Admin",
+    company: "Remote", 
+    dates: "Present",
     location: "Remote",
-    description: "Providing comprehensive accounting services to diverse clients, including bookkeeping, financial reporting, tax preparation, and business advisory. Managing portfolios for small businesses and startups."
+    description: "Performs admin and financial coordination for e-commerce advertising. Handles reporting, scheduling, and customer follow-up. Supports digital operations and database upkeep."
   },
   {
-    title: "Accountant II",
-    company: "Thompson & Associates CPA",
-    dates: "2020 – 2023",
-    location: "New York, NY", 
-    description: "Managed financial reporting for portfolio of 20+ clients. Prepared corporate tax returns, conducted financial audits, and implemented cost-saving strategies resulting in average 15% reduction in tax liabilities."
-  },
-  {
-    title: "Staff Accountant",
-    company: "Global Finance Solutions",
-    dates: "2018 – 2020",
-    location: "Chicago, IL",
-    description: "Handled accounts payable/receivable, monthly reconciliations, and financial statement preparation. Assisted with year-end audits and maintained general ledger accuracy."
-  },
-  {
-    title: "Junior Accountant",
-    company: "Regional Accounting Firm",
-    dates: "2016 – 2018",
-    location: "Boston, MA",
-    description: "Supported senior accountants with bookkeeping, data entry, and tax return preparation. Gained experience in QuickBooks, Excel modeling, and financial analysis."
+    title: "Junior Accounting Assistant (OJT)",
+    company: "Office of the City Councilor, Las Piñas",
+    dates: "2024",
+    location: "Las Piñas City", 
+    description: "Supported accounting functions including data entry, document management, and report preparation. Assisted with financial reporting and compliance tracking. Collaborated with administrative team on audit preparation and budgeting tasks."
   },
 ];
 
 const skills = [
-  { category: "Financial Management", items: ["Financial Reporting", "Tax Preparation", "Budgeting & Forecasting", "Audit Procedures", "Cash Flow Management", "Financial Analysis", "Risk Assessment"] },
-  { category: "Compliance & Regulations", items: ["GAAP", "Tax Law Compliance", "SOX Compliance", "Internal Controls", "Financial Auditing", "Regulatory Reporting", "Ethics Standards"] },
-  { category: "Tools & Software", items: ["QuickBooks", "Excel Advanced", "SAP", "Sage", "TaxSlayer Pro", "Xero", "Power BI"] },
+  { category: "Core Competencies", items: ["Communication", "Accounting", "Marketing & Finance", "Technical & Administration"] },
+  { category: "Software & Tools", items: ["Microsoft Excel", "QuickBooks", "Xero", "Microsoft 365", "Digital Marketing Tools"] },
+  { category: "Professional Skills", items: ["Bookkeeping", "Financial Reporting", "Budget Analysis", "Data Entry", "Document Management", "Compliance Tracking"] },
 ];
 
 const education = [
   {
-    degree: "Master of Business Administration - Accounting",
-    school: "University of Chicago Booth School",
-    dates: "2014 – 2016",
-    location: "Chicago, IL",
-    honors: "Beta Gamma Sigma Honor Society"
+    degree: "Bachelor of Science in Accountancy",
+    school: "Lyceum of Alabang",
+    dates: "Graduated: July 30, 2025",
+    location: "Alabang",
+    honors: ""
   },
   {
-    degree: "Bachelor of Science - Accounting",
-    school: "Boston University",
-    dates: "2011 – 2014",
-    location: "Boston, MA",
-    honors: "Magna Cum Laude, Dean's List"
+    degree: "Bachelor of Science in Accountancy",
+    school: "Emilio Aguinaldo College – Manila",
+    dates: "2021 – 2024",
+    location: "Manila",
+    honors: "Academic Scholar • JPIA VP for Finance (2023–2024) • JPIA VP for Information and Publicity (2022–2023)"
+  },
+  {
+    degree: "Senior High School",
+    school: "Saint Marks Institute Main",
+    dates: "2021",
+    location: "",
+    honors: "Valedictorian • With High Honors • Full Scholarship"
+  },
+  {
+    degree: "Junior High School",
+    school: "Saint Francis of Assisi College",
+    dates: "2019",
+    location: "",
+    honors: "With Honors • Full Scholarship"
+  },
+  {
+    degree: "Elementary",
+    school: "Almanza Elementary School",
+    dates: "2015",
+    location: "",
+    honors: "With Honors • Regional Dish Gardening Champion • Division Balagtasan Runner-Up • 9th Parol Festival Runner-Up"
   }
 ];
 
 const awards = [
   {
-    title: "CPA Certification",
-    organization: "AICPA",
-    year: "2017",
+    title: "Microsoft Office Specialist (Excel Associate)",
+    organization: "Microsoft",
+    year: "2024",
     category: "Professional Certification"
   },
   {
-    title: "Excellence in Financial Reporting",
-    organization: "State CPA Society",
-    year: "2021",
-    category: "Professional Achievement"
+    title: "Xero Advisor Certified",
+    organization: "Xero",
+    year: "2024",
+    category: "Professional Certification"
   },
   {
-    title: "QuickBooks ProAdvisor",
-    organization: "Intuit",
-    year: "2020",
-    category: "Advanced Certification"
+    title: "Bookkeeping NCII & NCIII Passer",
+    organization: "TESDA",
+    year: "2024",
+    category: "National Certification"
+  },
+  {
+    title: "Digital Body Language",
+    organization: "LinkedIn Learning",
+    year: "2024",
+    category: "Professional Development"
+  },
+  {
+    title: "Learning Microsoft 365 Copilot",
+    organization: "LinkedIn Learning",
+    year: "2024",
+    category: "Professional Development"
   }
 ];
 
 const About = () => {
   return (
     <section id="about" className="py-20 lg:py-28 bg-light-gray">
-      <ScrollFadeInSection>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <h2 className="text-center text-primary-pink text-[48px] font-bold leading-tight mb-4">
-            Resume
+            About Me
           </h2>
-          <p className="text-center text-medium-gray text-lg mb-16 max-w-2xl mx-auto">
-            Accountant • Professional Experience
-          </p>
+
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            <div className="lg:col-span-2 space-y-16">
+          <div className="space-y-16 max-w-4xl mx-auto">
               {/* Professional Summary */}
               <section>
-                <h3 className="text-primary-orange text-[28px] font-bold mb-6 border-b-2 border-primary-orange pb-2">
-                  Professional Summary
-                </h3>
                 <div className="text-dark-gray text-lg leading-relaxed space-y-4">
                   <p>
-                    Dedicated Accountant with extensive experience in financial management, tax preparation, 
-                    and regulatory compliance. Specialized in providing comprehensive accounting services to small 
-                    and medium-sized businesses, ensuring accurate financial reporting and strategic financial planning.
-                  </p>
-                  <p>
-                    Expertise spans financial analysis, budgeting, auditing, and implementing efficient accounting 
-                    systems that drive business growth while maintaining strict compliance with accounting standards 
-                    and regulations.
+                    Hardworking and detail-oriented Accountant and Licensed Financial Advisor with a strong foundation in financial principles and practices. Completed On-the-Job Training as a Junior Accounting Assistant at the Office of the City Councilor in Las Piñas. Eager to learn and grow in a hands-on accounting role within a dynamic work environment.
                   </p>
                 </div>
               </section>
@@ -148,11 +151,11 @@ const About = () => {
                 </h3>
                 <div className="space-y-6">
                   {education.map((edu, index) => (
-                    <div key={index} className="border-l-4 border-primary-orange pl-6">
+                    <div key={index} className="border-l-4 border-primary-pink pl-6">
                       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start">
                         <div>
                           <h4 className="text-xl text-dark-gray font-bold">{edu.degree}</h4>
-                          <h5 className="text-primary-orange font-semibold text-lg">{edu.school}</h5>
+                          <h5 className="text-primary-pink font-semibold text-lg">{edu.school}</h5>
                           <p className="text-medium-gray text-sm italic mt-1">{edu.honors}</p>
                         </div>
                         <div className="text-right mt-2 sm:mt-0">
@@ -165,13 +168,9 @@ const About = () => {
                   ))}
                 </div>
               </section>
-            </div>
-
-            {/* Sidebar - Skills & Awards */}
-            <div className="space-y-12">
               {/* Skills */}
               <section>
-                <h3 className="text-primary-pink text-[28px] font-bold mb-6 border-b-2 border-primary-pink pb-2">
+                <h3 className="text-primary-orange text-[28px] font-bold mb-6 border-b-2 border-primary-orange pb-2">
                   Skills & Expertise
                 </h3>
                 <div className="space-y-6">
@@ -182,7 +181,7 @@ const About = () => {
                         {skillGroup.items.map((skill, skillIndex) => (
                           <span 
                             key={skillIndex}
-                            className="inline-block px-3 py-1 bg-primary-orange/10 text-dark-gray text-sm rounded-full border border-primary-orange/20"
+                            className="inline-block px-3 py-1 bg-primary-pink/10 text-dark-gray text-sm rounded-full border border-primary-pink/20"
                           >
                             {skill}
                           </span>
@@ -195,46 +194,24 @@ const About = () => {
 
               {/* Awards */}
               <section>
-                <h3 className="text-primary-pink text-[28px] font-bold mb-6 border-b-2 border-primary-pink pb-2">
-                  Awards & Recognition
+                <h3 className="text-primary-orange text-[28px] font-bold mb-6 border-b-2 border-primary-orange pb-2">
+                  Certificates
                 </h3>
                 <div className="space-y-4">
                   {awards.map((award, index) => (
-                    <div key={index} className="border border-primary-orange/20 rounded-lg p-4 bg-white/50">
+                    <div key={index} className="border border-primary-pink/20 rounded-lg p-4 bg-white/50">
                       <h4 className="text-dark-gray font-bold text-lg">{award.title}</h4>
-                      <p className="text-primary-orange font-semibold">{award.organization}</p>
+                      <p className="text-primary-pink font-semibold">{award.organization}</p>
                       <div className="text-medium-gray text-sm">
-                        <span>{award.year}</span> • <span>{award.category}</span>
+                        <span>{award.year}</span>
                       </div>
                     </div>
                   ))}
                 </div>
               </section>
 
-              {/* Contact */}
-              <section>
-                <h3 className="text-primary-pink text-[28px] font-bold mb-6 border-b-2 border-primary-pink pb-2">
-                  Let's Connect
-                </h3>
-                <div className="space-y-3">
-                  <Link
-                    href="mailto:hanna.sauquillo@email.com"
-                    className="block text-dark-gray hover:text-primary-orange transition-colors"
-                  >
-                    hanna.sauquillo@email.com
-                  </Link>
-                  <Link
-                    href="#contact"
-                    className="block text-primary-orange font-semibold hover:text-primary-pink transition-colors"
-                  >
-                    Message Me
-                  </Link>
-                </div>
-              </section>
-            </div>
           </div>
         </div>
-      </ScrollFadeInSection>
     </section>
   );
 };

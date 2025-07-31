@@ -8,7 +8,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col bg-light-gray pt-24">
       <Hero />
       <About />
-      <ProjectsGrid />
+      {/* <ProjectsGrid /> */}
       <Contact />
     </main>
   );

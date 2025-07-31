@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ErrorReporter from "@/components/ErrorReporter";
-import Navigation from "@/components/layout/Navigation";
 
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import Script from "next/script";
 export const metadata: Metadata = {
-  title: "Hanna Sauquillo | Portfolio",
-  description: "Accountant portfolio showcasing professional work and expertise",
+  title: "Hanna Louisa Sauquillo | Accountant & Licensed Financial Advisor",
+  description: "Professional Accountant and Licensed Financial Advisor showcasing expertise, experience, and certifications",
 };
 
 export default function RootLayout({
@@ -29,7 +28,6 @@ export default function RootLayout({
           data-custom-data='{"appName": "YourApp", "version": "1.0.0", "greeting": "hi"}'
         />
         <ErrorReporter />
-        <Navigation />
         {children}
   <VisualEditsMessenger />
 </body>
