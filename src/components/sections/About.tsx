@@ -1,4 +1,6 @@
 
+import { ScrollFadeInSection } from "@/components/ui/ScrollFadeInSection";
+
 const experiences = [
   {
     title: "Adscale Admin",
@@ -97,22 +99,27 @@ const About = () => {
   return (
     <section id="about" className="py-20 lg:py-28 bg-light-gray">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <ScrollFadeInSection>
           <h2 className="text-center text-primary-pink text-[48px] font-bold leading-tight mb-4">
             About Me
           </h2>
+          </ScrollFadeInSection>
 
           
           <div className="space-y-16 max-w-4xl mx-auto">
               {/* Professional Summary */}
+              <ScrollFadeInSection>
               <section>
                 <div className="text-dark-gray text-lg leading-relaxed space-y-4">
                   <p>
-                    Hardworking and detail-oriented Accountant and Licensed Financial Advisor with a strong foundation in financial principles and practices. Completed On-the-Job Training as a Junior Accounting Assistant at the Office of the City Councilor in Las Piñas. Eager to learn and grow in a hands-on accounting role within a dynamic work environment.
+                    An Accountant and Licensed Financial Advisor with expertise in financial management, compliance, and strategic financial planning. Proven track record in government accounting through comprehensive training at the Office of the City Councilor in Las Piñas, combined with current experience in digital business financial coordination. Committed to delivering accurate financial solutions and helping clients achieve their business objectives through sound financial practices.
                   </p>
                 </div>
               </section>
+              </ScrollFadeInSection>
 
               {/* Experience Section */}
+              <ScrollFadeInSection>
               <section>
                 <h3 className="text-primary-orange text-[28px] font-bold mb-6 border-b-2 border-primary-orange pb-2">
                   Experience
@@ -143,8 +150,10 @@ const About = () => {
                   ))}
                 </div>
               </section>
+              </ScrollFadeInSection>
 
               {/* Education Section */}
+              <ScrollFadeInSection>
               <section>
                 <h3 className="text-primary-orange text-[28px] font-bold mb-6 border-b-2 border-primary-orange pb-2">
                   Education
@@ -168,7 +177,9 @@ const About = () => {
                   ))}
                 </div>
               </section>
+              </ScrollFadeInSection>
               {/* Skills */}
+              <ScrollFadeInSection>
               <section>
                 <h3 className="text-primary-orange text-[28px] font-bold mb-6 border-b-2 border-primary-orange pb-2">
                   Skills & Expertise
@@ -191,8 +202,10 @@ const About = () => {
                   ))}
                 </div>
               </section>
+              </ScrollFadeInSection>
 
               {/* Awards */}
+              <ScrollFadeInSection>
               <section>
                 <h3 className="text-primary-orange text-[28px] font-bold mb-6 border-b-2 border-primary-orange pb-2">
                   Certificates
@@ -209,6 +222,7 @@ const About = () => {
                   ))}
                 </div>
               </section>
+              </ScrollFadeInSection>
 
           </div>
         </div>
