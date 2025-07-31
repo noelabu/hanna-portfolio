@@ -20,7 +20,7 @@ const contactItems = [
   {
     label: 'Grab my CV:',
     text: 'Download',
-    href: '#',
+    href: '/Hanna Sauquillo Resume.pdf',
     isExternal: true,
   },
 ];
