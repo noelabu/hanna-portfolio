@@ -1,5 +1,6 @@
 
 import { ScrollFadeInSection } from "@/components/ui/ScrollFadeInSection";
+import Image from "next/image";
 
 const experiences = [
   {
@@ -64,34 +65,46 @@ const education = [
 
 const awards = [
   {
-    title: "Microsoft Office Specialist (Excel Associate)",
+    title: "Microsoft Office Specialist (Excel Expert Microsoft 365 Apps)",
     organization: "Microsoft",
-    year: "2024",
-    category: "Professional Certification"
+    year: "2025",
+    category: "Microsoft Office Specialist",
+    image: "/certificates/microsoft.jpeg"
   },
   {
     title: "Xero Advisor Certified",
     organization: "Xero",
-    year: "2024",
-    category: "Professional Certification"
+    year: "2025",
+    category: "Professional Certification",
+    image: "/certificates/xero.jpeg"
   },
   {
-    title: "Bookkeeping NCII & NCIII Passer",
-    organization: "TESDA",
-    year: "2024",
-    category: "National Certification"
+    title: "Intuit Bookkeep Certification",
+    organization: "Intuit",
+    year: "2025",
+    category: "Online Certification",
+    image: "/certificates/bookkeeper.jpeg"
+  },
+  {
+    title: "Quickbooks ONline Accountant Certification",
+    organization: "Intuit",
+    year: "2025",
+    category: "Online Certification",
+    image: "/certificates/quickbooks.jpeg"
   },
   {
     title: "Digital Body Language",
     organization: "LinkedIn Learning",
     year: "2024",
-    category: "Professional Development"
+    category: "Professional Development",
+    url: "https://www.linkedin.com/learning/certificates/23b06a9d68fd02b0a0bcd921da2472eef345265a8545b2eb24e819d415bbbad6"
   },
   {
     title: "Learning Microsoft 365 Copilot",
     organization: "LinkedIn Learning",
-    year: "2024",
-    category: "Professional Development"
+    year: "2023",
+    category: "Professional Development",
+    url: "https://www.linkedin.com/learning/certificates/317d52a3d9174bb3e2d5dda39d8f52218d3c37b0b952aa7b254806c868668a85"
   }
 ];
 
@@ -210,13 +223,35 @@ const About = () => {
                 <h3 className="text-primary-orange text-[28px] font-bold mb-6 border-b-2 border-primary-orange pb-2">
                   Certificates
                 </h3>
-                <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {awards.map((award, index) => (
-                    <div key={index} className="border border-primary-pink/20 rounded-lg p-4 bg-white/50">
-                      <h4 className="text-dark-gray font-bold text-lg">{award.title}</h4>
-                      <p className="text-primary-pink font-semibold">{award.organization}</p>
-                      <div className="text-medium-gray text-sm">
-                        <span>{award.year}</span>
+                    <div key={index} className="border border-primary-pink/20 rounded-lg overflow-hidden bg-white/50 hover:shadow-lg transition-shadow">
+                      {award.image && (
+                        <div className="relative h-48 w-full bg-gray-100">
+                          <Image
+                            src={award.image}
+                            alt={award.title}
+                            fill
+                            className="object-contain p-4"
+                          />
+                        </div>
+                      )}
+                      <div className="p-4">
+                        <h4 className="text-dark-gray font-bold text-lg">{award.title}</h4>
+                        <p className="text-primary-pink font-semibold">{award.organization}</p>
+                        <div className="flex items-center justify-between mt-2">
+                          <span className="text-medium-gray text-sm">{award.year}</span>
+                          {award.url && (
+                            <a 
+                              href={award.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer"
+                              className="text-primary-pink text-sm font-medium hover:text-primary-orange transition-colors"
+                            >
+                              View Certificate →
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                   ))}
