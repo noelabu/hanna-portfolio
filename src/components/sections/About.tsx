@@ -108,6 +108,34 @@ const awards = [
   }
 ];
 
+const projects = [
+  {
+    title: "Preparation of Financial Statements – Mae Pag-asa Motor Sales Parts",
+    date: "December 2024",
+    description: `Prepared the Income Statement and Balance Sheet for Mae Pag-asa Motor Sales Parts for the month ended December 31, 2024.`,
+    highlights: [
+      "Income Statement Preparation: Computed net sales by reconciling gross sales with sales returns and allowances, calculated cost of goods sold, and determined gross profit. Accounted for operating expenses, other income, and discounts to accurately report net income for the month.",
+      "Balance Sheet Compilation: Organized current and fixed assets, verified inventory valuation, and ensured accurate reporting of liabilities and capital. Prepared final capital computation by adjusting owner's equity and incorporating net income for the period.",
+      "Financial Analysis: Ensured alignment of totals between assets, liabilities, and capital, confirming the overall financial position of the business at year-end."
+    ],
+    outcome: "This project demonstrated expertise in preparing complete financial statements, ensuring accuracy in revenue recognition, expense allocation, and end-of-period adjustments in line with accounting principles.",
+    file: "/projects/Preparation of Financial Statements – Mae Pag-asa Motor Sales Parts .xls"
+  },
+  {
+    title: "Comprehensive Multi-Branch Audit – Gryn Wasabi Sushi Bar",
+    date: "2019",
+    description: "Conducted a full-scale audit of Gryn Wasabi Sushi Bar encompassing all 22 branches to ensure financial accuracy, operational efficiency, and compliance with internal controls.",
+    highlights: [
+      "Sales and Inventory Reconciliation: Verified declared gross sales against actual inventory movement across all product categories to ensure accurate revenue recognition.",
+      "Variance Analysis: Performed detailed variance assessments to identify discrepancies between reported sales and inventory usage, minimizing revenue leakage and operational losses.",
+      "Internal Control Evaluation: Reviewed branch-level procedures, including cash handling, stock management, and sales reporting systems, to strengthen compliance with company policies.",
+      "Reporting and Recommendations: Developed comprehensive audit reports with findings and actionable recommendations to enhance internal control systems, improve financial integrity, and standardize processes across all locations."
+    ],
+    outcome: "This audit played a key role in establishing stronger financial oversight and improving operational consistency across the entire Gryn Wasabi Sushi Bar network.",
+    file: "/projects/Comprehensive Multi-Branch Audit – Gryn Wasabi Sushi Bar (2019).xlsx"
+  }
+];
+
 const About = () => {
   return (
     <section id="about" className="py-20 lg:py-28 bg-light-gray">
@@ -253,6 +281,51 @@ const About = () => {
                           )}
                         </div>
                       </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+              </ScrollFadeInSection>
+
+              {/* Projects */}
+              <ScrollFadeInSection>
+              <section>
+                <h3 className="text-primary-orange text-[28px] font-bold mb-6 border-b-2 border-primary-orange pb-2">
+                  Key Projects
+                </h3>
+                <div className="space-y-8">
+                  {projects.map((project, index) => (
+                    <div key={index} className="border border-primary-pink/20 rounded-lg p-6 bg-white/50 hover:shadow-lg transition-shadow">
+                      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+                        <h4 className="text-dark-gray font-bold text-xl mb-2 sm:mb-0">{project.title}</h4>
+                        <span className="text-medium-gray text-sm font-medium">{project.date}</span>
+                      </div>
+                      
+                      <p className="text-dark-gray mb-4 leading-relaxed">{project.description}</p>
+                      
+                      <div className="space-y-3 mb-4">
+                        {project.highlights.map((highlight, idx) => (
+                          <div key={idx} className="flex items-start">
+                            <span className="text-primary-pink text-sm mr-2 mt-1">•</span>
+                            <p className="text-dark-gray text-sm leading-relaxed">{highlight}</p>
+                          </div>
+                        ))}
+                      </div>
+                      
+                      <p className="text-dark-gray font-medium italic mb-4">{project.outcome}</p>
+                      
+                      {project.file && (
+                        <a 
+                          href={project.file}
+                          download
+                          className="inline-flex items-center text-primary-pink text-sm font-medium hover:text-primary-orange transition-colors"
+                        >
+                          <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                          Download Project File
+                        </a>
+                      )}
                     </div>
                   ))}
                 </div>
